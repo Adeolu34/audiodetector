@@ -1,0 +1,12 @@
+torch
+torchvision
+torchaudio
+librosa
+numpy
+pandas
+scikit-learn
+pyyaml
+soundfile
+matplotlib
+tqdm
+gradio>=4.0.0

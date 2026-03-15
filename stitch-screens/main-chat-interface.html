@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed-dim": "#bec4f2",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#713700",
+                        "secondary-container": "#c9cffd",
+                        "on-surface": "#1a1b22",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "on-primary-fixed": "#00105c",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#4355b9",
+                        "outline": "#757684",
+                        "on-tertiary-fixed": "#301400",
+                        "primary-container": "#3f51b5",
+                        "tertiary-container": "#8f4700",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "primary-fixed": "#dee0ff",
+                        "surface-container": "#efedf6",
+                        "on-secondary-fixed": "#12183d",
+                        "secondary": "#565c84",
+                        "outline-variant": "#c5c5d4",
+                        "surface-container-low": "#f4f2fc",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb784",
+                        "background": "#fbf8ff",
+                        "inverse-surface": "#2f3037",
+                        "inverse-primary": "#bac3ff",
+                        "on-surface-variant": "#454652",
+                        "on-primary-container": "#cacfff",
+                        "surface-container-highest": "#e3e1ea",
+                        "surface": "#fbf8ff",
+                        "inverse-on-surface": "#f2eff9",
+                        "on-secondary-fixed-variant": "#3e446b",
+                        "on-secondary-container": "#51577f",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dbd9e2",
+                        "primary": "#24389c",
+                        "surface-container-high": "#e9e7f0",
+                        "on-tertiary-container": "#ffc7a2",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#bac3ff",
+                        "secondary-fixed": "#dee0ff",
+                        "tertiary": "#6c3400",
+                        "on-background": "#1a1b22",
+                        "surface-bright": "#fbf8ff",
+                        "surface-variant": "#e3e1ea"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #fbf8ff; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .ai-bubble {
+            border-bottom-left-radius: 0.25rem;
+        }
+        .user-bubble {
+            border-bottom-right-radius: 0.25rem;
+        }
+        .glass-header {
+            background-color: rgba(251, 248, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5c5d4;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<div class="flex h-screen overflow-hidden">
+<!-- SideNavBar (Shared Component) -->
+<aside class="w-72 bg-surface-container-low flex flex-col border-r border-outline-variant/15">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-8">
+<img alt="User Profile" class="w-10 h-10 rounded-lg bg-primary-container" data-alt="Professional user profile avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzk44Y8k6q9aT_qy7QKyfyP-3D4s5BYbqvb7HZAyssPFpZytnpTx3lBwQ3rUDsp_UmMnpW8MGLLB5DnEDh3ynY7dqheqIjnTwFZBQwQSh45YsAIoQa4LCLq6U7rTeRc5UUnd4XZSFN7BfQKXLqtkxZY9rVhEZFt0MErJTFj8orar2Z5TrbY9GPQsM9AhgBGq674EOPSCcC-2WgUjqZ9uaqHhTFcp8grKUO8onSIoRXTcTvHIPNQr6R8aNxtgx4HwM0d-eMz4ov3pA"/>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-sm tracking-tight">Chatbot AI</span>
+<span class="text-[10px] text-primary font-medium">Premium Member</span>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-fixed text-on-primary-fixed font-medium transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="text-sm">New Chat</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-sm">History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-sm">Help</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-error-container/20 hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col relative bg-surface">
+<!-- TopNavBar (Shared Component) -->
+<header class="glass-header sticky top-0 z-10 h-16 flex items-center justify-between px-8 border-b border-outline-variant/15">
+<div class="flex items-center gap-4">
+<h1 class="font-headline font-extrabold text-lg text-primary tracking-tight">Chatbot AI</h1>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<span class="text-xs font-medium text-on-surface-variant bg-surface-container-high px-2 py-1 rounded">GPT-4 Turbo</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Chat Window Content -->
+<section class="flex-1 overflow-y-auto px-8 py-10 space-y-10">
+<!-- Welcome State / Context Card (Bento-style) -->
+<div class="max-w-4xl mx-auto mb-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="md:col-span-2 p-8 rounded-3xl bg-primary-container text-on-primary-container relative overflow-hidden group">
+<div class="relative z-10">
+<h2 class="font-headline text-3xl font-bold mb-3 tracking-tight">Welcome back, Felix.</h2>
+<p class="text-on-primary-container/80 text-lg leading-relaxed max-w-md font-light">How can I assist your creative process today? I'm ready to analyze, code, or brainstorm.</p>
+</div>
+<div class="absolute -right-8 -bottom-8 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<div class="p-8 rounded-3xl bg-secondary-container text-on-secondary-container flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-4xl mb-2" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-headline font-bold text-xl">Fast Mode</span>
+<span class="text-sm opacity-70">Latency &lt; 200ms</span>
+</div>
+</div>
+</div>
+<!-- Chat History Area -->
+<div class="max-w-4xl mx-auto space-y-8 pb-32">
+<!-- User Message -->
+<div class="flex justify-end pl-12">
+<div class="user-bubble bg-primary p-5 rounded-3xl text-on-primary shadow-lg shadow-primary/10 max-w-xl">
+<p class="text-[15px] leading-relaxed">Could you help me design a data visualization for a financial dashboard? I need it to look modern and use a sophisticated color palette.</p>
+</div>
+</div>
+<!-- AI Response -->
+<div class="flex justify-start pr-12">
+<div class="flex gap-4">
+<div class="flex-shrink-0 mt-1">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+</div>
+<div class="ai-bubble bg-secondary-container p-6 rounded-3xl text-on-secondary-container max-w-2xl">
+<p class="text-[15px] leading-relaxed mb-4">Certainly. For a sophisticated financial dashboard, I recommend a palette centered around deep indigos, slate grays, and accented with muted emeralds or ambers for high-importance data points.</p>
+<!-- Bento Detail Card for Suggestion -->
+<div class="grid grid-cols-2 gap-3 mt-4">
+<div class="p-4 bg-surface-container-lowest rounded-2xl border border-outline-variant/10">
+<div class="w-full h-24 rounded-xl bg-gradient-to-br from-primary to-primary-container mb-3" data-alt="Abstract financial bar chart visualization preview"></div>
+<p class="text-xs font-bold text-on-surface">Layered Area Chart</p>
+<p class="text-[10px] text-on-surface-variant">Best for trend analysis</p>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-2xl border border-outline-variant/10">
+<div class="w-full h-24 rounded-xl bg-gradient-to-br from-secondary to-secondary-fixed mb-3" data-alt="Abstract node-link diagram visualization preview"></div>
+<p class="text-xs font-bold text-on-surface">Relationship Node</p>
+<p class="text-[10px] text-on-surface-variant">Best for connectivity</p>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+<span class="text-[10px] font-semibold bg-primary/10 text-primary px-2 py-1 rounded">Visual Design</span>
+<span class="text-[10px] font-semibold bg-primary/10 text-primary px-2 py-1 rounded">FinTech</span>
+</div>
+</div>
+</div>
+</div>
+<!-- User Message 2 -->
+<div class="flex justify-end pl-12">
+<div class="user-bubble bg-primary p-5 rounded-3xl text-on-primary shadow-lg shadow-primary/10 max-w-xl">
+<p class="text-[15px] leading-relaxed">The layered area chart looks great. Can you generate the CSS for those gradients?</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Input Bar (Floating/Glassmorphism) -->
+<footer class="absolute bottom-0 left-0 right-0 p-6 flex justify-center pointer-events-none">
+<div class="w-full max-w-4xl bg-surface-container-high/90 backdrop-blur-xl rounded-full p-2 border border-outline-variant/20 shadow-2xl pointer-events-auto flex items-center gap-2">
+<button class="w-12 h-12 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="attach_file">attach_file</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface placeholder-on-surface-variant/60 font-body px-2" placeholder="Message Chatbot AI..." type="text"/>
+<div class="flex items-center gap-1 pr-1">
+<button class="w-12 h-12 flex items-center justify-center text-primary hover:bg-primary-fixed rounded-full transition-colors" title="Voice Recording">
+<span class="material-symbols-outlined" data-icon="mic">mic</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav (Shared Component) - Hidden on Desktop -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-lowest border-t border-outline-variant/15 flex justify-around py-3 px-6 z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="text-[10px] font-medium">Chat</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px] font-medium">History</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</main>
+</div>
+</body></html>

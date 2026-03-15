@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+nul
+
+# Model checkpoints (large binary files)
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# Data & datasets (large files)
+data/
+dataset/
+
+# Feedback exports
+feedback_export.csv
+
+# Misc
+*.log
+=4.0.0
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
+config.bat
+node_modules
